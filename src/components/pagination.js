@@ -7,7 +7,6 @@ export const initPagination = (
   // @todo: #2.3 — подготовить шаблон кнопки для страницы и очистить контейнер
   const pageTemplate = pages.firstElementChild.cloneNode(true); // в качестве шаблона берём первый элемент из контейнера со страницами
   pages.firstElementChild.remove();
-  //return (data, state, action) => {
 
   let pageCount;
 
@@ -63,15 +62,4 @@ export const initPagination = (
     updatePagination,
     applyPagination,
   };
-  // @todo: #2.1 — посчитать количество страниц, объявить переменные и константы
-  // const rowsPerPage = state.rowsPerPage;                        // будем часто обращаться, чтобы короче записывать
-  // const pageCount = Math.ceil(data.length / rowsPerPage);        // число страниц округляем в большую сторону
-  // let page = state.page;                                        // страница переменной, потому что она может меняться при обработке действий позже
-
-  // @todo: #2.4 — получить список видимых страниц и вывести их
-  // const visiblePages = getPages(page, pageCount, 5);                // Получим массив страниц, которые нужно показать, выводим только 5 страниц
-  // pages.replaceChildren(...visiblePages.map(pageNumber => {        // перебираем их и создаём для них кнопку
-  // const el = pageTemplate.cloneNode(true);                    // клонируем шаблон, который запомнили ранее
-  // return createPage(el, pageNumber, pageNumber === page);        // вызываем колбэк из настроек, чтобы заполнить кнопку данными
-  //  }))
 };
